@@ -1,0 +1,171 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 720px;
+  min-height: 100svh;
+  overflow: hidden;
+
+  background-color: #252624;
+  background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85');
+  background-position: center;
+  background-size: cover;
+
+  color: #ffffff;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(18, 19, 18, 0.9) 0%,
+      rgba(18, 19, 18, 0.65) 45%,
+      rgba(18, 19, 18, 0.15) 100%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+
+  width: 600px;
+  max-width: 80%;
+  margin: 50px 0 0 12%;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 28px;
+
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.eyebrow span {
+  width: 28px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.content h1 {
+  font-size: clamp(52px, 7vw, 90px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.content h1 span {
+  color: var(--color-accent);
+}
+
+.description {
+  max-width: 420px;
+  margin-top: 24px;
+
+  color: #d2d3ce;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 32px;
+  padding: 14px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  color: #ffffff;
+  font-size: 11px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.button:hover {
+  background: #ffffff;
+  color: var(--color-dark);
+}
+
+.button span {
+  color: var(--color-accent);
+  font-size: 16px;
+}
+
+.sideNote {
+  position: absolute;
+  right: 7%;
+  bottom: 80px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+}
+
+.sideNote span {
+  margin-top: 15px;
+  color: var(--color-accent);
+}
+
+.scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 8%;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.scroll span {
+  width: 35px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 680px;
+    background-position: 58% center;
+  }
+
+  .content {
+    max-width: 88%;
+    margin: 40px 0 0 6%;
+  }
+
+  .content h1 {
+    font-size: clamp(48px, 12vw, 68px);
+    letter-spacing: -2px;
+  }
+
+  .description {
+    max-width: 350px;
+    font-size: 13px;
+  }
+
+  .sideNote {
+    right: 4%;
+    bottom: 75px;
+    font-size: 8px;
+  }
+
+  .scroll {
+    left: 6%;
+    bottom: 25px;
+  }
+}

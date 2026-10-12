@@ -1,0 +1,161 @@
+.footer {
+  background: var(--color-dark);
+  color: #ffffff;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.contactBlock {
+  padding: 60px 12%;
+  border-right: 1px solid #ffffff20;
+}
+
+.brand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: var(--color-accent);
+}
+
+.smallLabel {
+  margin-top: 30px;
+  color: #b4b5ad;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.phone {
+  display: block;
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.email {
+  display: inline-block;
+  margin-top: 8px;
+  color: #c4c5bf;
+  font-size: 12px;
+}
+
+.socials {
+  display: flex;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ffffff70;
+  border-radius: 50%;
+
+  font-size: 10px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.socials a:hover {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 65px 10% 25px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.columns h3 {
+  margin-bottom: 18px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.columns a {
+  display: block;
+  margin-top: 12px;
+  color: #c0c1bb;
+  font-size: 11px;
+  transition: color 0.2s ease;
+}
+
+.columns a:hover {
+  color: var(--color-accent);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-top: 55px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff20;
+
+  color: #aeb0a8;
+  font-size: 10px;
+}
+
+.bottom a {
+  color: #ffffff;
+}
+
+.bottom a:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  .contactBlock {
+    padding: 45px 6%;
+    border-right: none;
+    border-bottom: 1px solid #ffffff20;
+  }
+
+  .footerRight {
+    padding: 40px 6% 25px;
+  }
+
+  .columns {
+    gap: 15px;
+  }
+
+  .columns h3 {
+    font-size: 11px;
+  }
+
+  .columns a {
+    font-size: 10px;
+  }
+
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+  }
+}
